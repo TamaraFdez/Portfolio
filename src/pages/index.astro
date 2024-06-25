@@ -12,6 +12,8 @@ import CodeIcon from "../components/icons/CodeIcon.astro";
 import Projects from "../components/Projects.astro";
 import MeIcon from "../components/icons/MeIcon.astro";
 import About from "../components/About.astro";
+import { Image } from "astro:assets";
+import chicaPurple from "../assets/Avatar-purple.png"
 ---
 
 <Layout
@@ -23,8 +25,8 @@ import About from "../components/About.astro";
 		><div
 					class="mb-12 rounded-full overflow-hidden w-96 h-96 mx-auto object-cover"
 				>
-					<img
-						src="/src/components/images/Avatar-purple.png"
+					<Image
+						src={chicaPurple}
 						alt="dibujo de una mujer de pelo morado y ojos morados creado por mi"
 					/>
 				</div>
