@@ -1,7 +1,8 @@
 ---
 import CssIcon from "./icons/CssIcon.astro";
 import ReactJsIcon from "./icons/ReactJsIcon.astro";
-
+import { Image } from "astro:assets";
+import ibb from "../components/images/vista-ibb.png"
 
 const TAGS = {
   REACT: {
@@ -23,7 +24,7 @@ const PROJECTS = [
         description: "Proyecto Open-Source en el que me encargué de la parte de Front-end y Diseño. Nos encargamos de revivir una pizarra que ya no tenia página web ni acceso al servidor original.",
         link: "#",
         github: "https://github.com/Stay1444/iboardbot",
-        image: ["/src/components/images/vista-ibb.png","/src/components/images/inic-ibb.png","/src/components/images/inic-v-ibb.png","/src/components/images/menu-ibb.png", "/src/components/images/menu-v-ibb.png"],
+        image: ibb,
         tags: [TAGS.REACT, TAGS.CSS]
     }
 ];
@@ -33,8 +34,8 @@ const PROJECTS = [
   PROJECTS.map(({ github,image, title, description, tags }) => (
     <article>
             <h3 class="text-2xl font-semibolt text-pink-400 mb-2">{title}</h3>
-          <img class="rounded-lg"
-              src={image[0]}
+          <Image class="rounded-lg"
+              src={image}
               alt={`Captura de pantalla del proyecto ${title}`}
           />
                <ul class="flex flex-row gap-x-2 m-2">

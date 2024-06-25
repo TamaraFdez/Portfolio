@@ -1,13 +1,14 @@
 ---
-const image = "/src/components/images/angel-vengador.png";
+import { Image } from "astro:assets";
+import Angel from "../components/images/angel-vengador.png"
 ---
 
 <article
     class="p-4 items-center flex flex-col"
 >
-    <img
+    <Image
         class="rounded-full mb-4 w-[250px] h-[250px] object-cover object-center border-4 border-pink-500"
-        src={image}
+        src={Angel}
         alt="dibujo hecho por mi de un personaje femenino"
     />
     <div class="text-pretty flex flex-col gap-y-4">
