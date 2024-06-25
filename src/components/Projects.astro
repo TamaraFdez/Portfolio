@@ -1,22 +1,30 @@
 ---
+import CssIcon from "./icons/CssIcon.astro";
+import ReactJsIcon from "./icons/ReactJsIcon.astro";
 
 
 const TAGS = {
   REACT: {
-    name: "React.js",
-    class: "bg-black text-white",
-    icon:""
-    //TODO poner TAGS
+    name: "ReactJS",
+    class: "bg-blue-500 text-white w-[90px]",
+    icon: ReactJsIcon
+    
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-blue-900 text-white w-[70px]",
+    icon: CssIcon
+  
   }
 }
 const PROJECTS = [
     {
         title: "I Board Bot",
-        description: "Es un proyecto Open-Source en el que participe para poder darle una segunda vida una pizarra mágica descatalogada y con el servidor y la pagina web oficial caidos. Me encargué de la parte del Front-End use React y CSS para los estilos y animaciones. Lá página consta de una página en dos partes, la primera donde para ingresar debes de meter una contraseña y la segunda es un doble formulario donde subir la imagen en SVG o Escribir un texto corto que quieras dibujar en la pizarra tan solo dandole a Enviar. Cabe decir que me encargue de todo el diseño, asi como la creación del logo y la maquetación de la página. ",
+        description: "Proyecto Open-Source en el que me encargué de la parte de Front-end y Diseño. Nos encargamos de revivir una pizarra que ya no tenia página web ni acceso al servidor original.",
         link: "#",
         github: "https://github.com/Stay1444/iboardbot",
         image: ["/src/components/images/vista-ibb.png","/src/components/images/inic-ibb.png","/src/components/images/inic-v-ibb.png","/src/components/images/menu-ibb.png", "/src/components/images/menu-v-ibb.png"],
-        tags: [TAGS.REACT]
+        tags: [TAGS.REACT, TAGS.CSS]
     }
 ];
 ---
@@ -29,12 +37,11 @@ const PROJECTS = [
               src={image[0]}
               alt={`Captura de pantalla del proyecto ${title}`}
           />
-            <p class="text-lg mb-4 text-pretty">{description}</p>
-            {/* <ul>
+               <ul class="flex flex-row gap-x-2 m-2">
                 {tags.map((tag) => (
             <li>
               <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                class={`flex  gap-x-2 rounded-full text-xs  ${tag.class} py-1 px-2 `}
               >
                 <tag.icon class="size-4" />
                 {tag.name}
@@ -42,7 +49,9 @@ const PROJECTS = [
               </span>
             </li>
           ))}
-        </ul> */}
+        </ul>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+       
         <a
     href={github}
     class="inline-flex items-center mb-2 px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
