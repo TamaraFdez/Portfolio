@@ -34,19 +34,21 @@ const { description,title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		color-scheme: light dark;
+	
 	}
 	html {
 		font-family: "Onest Variable", system-ui, sans-serif;scroll-behavior: smooth;
 	}
 	body {
 		min-height: 100vh;
+		color: #eee;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		background: #050505;
 		
 	}
+
 	@media (prefers-reduced-motion: reduce){
 		html{
 			scroll-behavior: auto;
