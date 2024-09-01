@@ -1,11 +1,12 @@
 ---
 import CssIcon from "./icons/CssIcon.astro";
 import ReactJsIcon from "./icons/ReactJsIcon.astro";
+import Wordpress from "./icons/Wordpress.astro";
 import { Image } from "astro:assets";
 import ibb from "../components/images/vista-ibb.png";
 import molacotton from "../components/images/molacotton.jpeg";
 import canribes from "../components/images/canribes.jpeg";
-import canribesRes from "../components/images/canribesrestaurante.jpeg"
+import canribesRes from "../components/images/canribes5.jpeg"
 
 const TAGS = {
   REACT: {
@@ -19,11 +20,17 @@ const TAGS = {
     class: "bg-blue-900 text-white w-[70px]",
     icon: CssIcon
   
+  },
+  WP: {
+    name: "WORDPRESS",
+    class: "bg-sky-400 text-white",
+    icon: Wordpress
+  
   }
 }
 const PROJECTS = [
     {
-        title: "I Board Bot",
+        title: "I BOARD BOT",
         description: "Proyecto Open-Source en el que me encargué de la parte de Front-end y Diseño. Nos encargamos de revivir una pizarra que ya no tenia página web ni acceso al servidor original.",
         link: "https://github.com/Stay1444/iboardbot",
         github: "https://github.com/Stay1444/iboardbot",
@@ -31,28 +38,28 @@ const PROJECTS = [
         tags: [TAGS.REACT, TAGS.CSS]
     },
     {
-        title: "Molacotton",
+        title: "MOLACOTTON",
         description: "Página web y Targeta Dígital personalizada de esta nueva empresa. Aunque falta que me pasaran las imagenes para los productos y el Título. Esta hecha con Wordpress y Divi.",
         link: "molacotton.com/home",
         github: "",
         image: molacotton,
-        tags: [TAGS.CSS]
+        tags: [TAGS.WP ]
     },
     {
-        title: "Can Ribes Restaurante",
+        title: "CAN RIBES Restaurante",
         description: "Ayude con el diseño y la maquetación de la página de Restaurante Can Ribes. Hecho con Wordpress y Divi a juego con su DigiMenú y Digitarjeta.",
         link: "https://restaurantecanribes.es/",
         github: "",
         image: canribesRes,
-        tags: [TAGS.CSS]
+        tags: [TAGS.WP]
     },
     {
-        title: "Can Ribes DigiMenú",
+        title: "CAN RIBES DigiMenú",
         description: "Menú Dígital de Restaurante. Hecho con Wordpress y Divi a juego con su Página principal.",
         link: "https://canribes.digimenu.es/carta-2024/",
         github: "",
         image: canribes,
-        tags: [TAGS.CSS]
+        tags: [TAGS.WP]
     },
 ];
 ---
@@ -60,8 +67,8 @@ const PROJECTS = [
 {
   PROJECTS.map(({ github,image,link, title, description, tags }) => (
     <article class="mb-20">
-            <h3 class="text-2xl font-semibolt text-pink-400 mb-2">{title}</h3>
-          <Image class="rounded-lg"
+            <h3 class="text-2xl font-semibold tracking-tight text-pink-400 mb-2">{title}</h3>
+          <Image class="rounded-lg max-w-100 h-auto "
               src={image}
               alt={`Captura de pantalla del proyecto ${title}`}
           />
