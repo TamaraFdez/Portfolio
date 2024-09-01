@@ -1,0 +1,62 @@
+---
+import SkillItem from "./SkillItem.astro";
+import CssIcon from "./icons/Css.astro";
+import Github from "./icons/Github.astro";
+import ReactJsIcon from "./icons/ReactJsIcon.astro";
+import HtmlIcon from "./icons/HtmlIcon.astro";
+import JsIcon from "./icons/JsIcon.astro";
+import PhpIcon from "./icons/PhpIcon.astro";
+import DatabaseIcon from "./icons/DatabaseIcon.astro";
+import GitIcon from "./icons/GitIcon.astro";
+import NodeIcon from "./icons/NodeIcon.astro";
+
+const SKILLS = [
+    {
+        imge: HtmlIcon,
+        name: "HTML",
+    },
+    {
+        imge: CssIcon,
+        name: "CSS",
+    },
+    {
+        imge: JsIcon,
+        name: "Javascript",
+    },
+    {
+        imge: ReactJsIcon,
+        name: "React",
+    },
+
+    {
+        imge: PhpIcon,
+        name: "PHP",
+    },
+    {
+        imge: DatabaseIcon,
+        name: "Bases de datos",
+    },
+    {
+        imge: GitIcon,
+        name: "GIT",
+    },
+    {
+        imge: Github,
+        name: "Github",
+    },
+    {
+        imge: NodeIcon,
+        name: "NodeJS",
+    },
+];
+---
+
+<ol class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 grid-flow-row gap-4 ">
+    {
+        SKILLS.map((skill) => (
+            <li class="mb-10 ms-4">
+                <SkillItem {...skill} />
+            </li>
+        ))
+    }
+</ol>

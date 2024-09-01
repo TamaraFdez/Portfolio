@@ -1,0 +1,13 @@
+---
+interface Props {
+    imge: any;
+    name: string;
+}
+    const { imge: IconComponent, name } = Astro.props;
+---
+
+<div class="flex">
+    <IconComponent class="size-7 mr-2" /> 
+    <p>{name}</p>
+</div>
+

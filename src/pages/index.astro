@@ -14,6 +14,7 @@ import MeIcon from "../components/icons/MeIcon.astro";
 import About from "../components/About.astro";
 import { Image } from "astro:assets";
 import chicaPurple from "../assets/Avatar-purple.png"
+import Skills from "../components/Skills.astro";
 ---
 
 <Layout
@@ -84,6 +85,12 @@ import chicaPurple from "../assets/Avatar-purple.png"
 				<MeIcon class="size-7" /> Sobre mi
 			</h2>
 			<About />
+		</SectionContainer>
+		<SectionContainer id="skills">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<MeIcon class="size-7" /> Skills
+			</h2>
+			<Skills />
 		</SectionContainer>
 	</main>
 </Layout>
