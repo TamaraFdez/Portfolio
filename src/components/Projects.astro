@@ -2,7 +2,10 @@
 import CssIcon from "./icons/CssIcon.astro";
 import ReactJsIcon from "./icons/ReactJsIcon.astro";
 import { Image } from "astro:assets";
-import ibb from "../components/images/vista-ibb.png"
+import ibb from "../components/images/vista-ibb.png";
+import molacotton from "../components/images/molacotton.jpeg";
+import canribes from "../components/images/canribes.jpeg";
+import canribesRes from "../components/images/canribesrestaurante.jpeg"
 
 const TAGS = {
   REACT: {
@@ -22,17 +25,41 @@ const PROJECTS = [
     {
         title: "I Board Bot",
         description: "Proyecto Open-Source en el que me encargué de la parte de Front-end y Diseño. Nos encargamos de revivir una pizarra que ya no tenia página web ni acceso al servidor original.",
-        link: "#",
+        link: "https://github.com/Stay1444/iboardbot",
         github: "https://github.com/Stay1444/iboardbot",
         image: ibb,
         tags: [TAGS.REACT, TAGS.CSS]
-    }
+    },
+    {
+        title: "Molacotton",
+        description: "Página web y Targeta Dígital personalizada de esta nueva empresa. Aunque falta que me pasaran las imagenes para los productos y el Título. Esta hecha con Wordpress y Divi.",
+        link: "molacotton.com/home",
+        github: "",
+        image: molacotton,
+        tags: [TAGS.CSS]
+    },
+    {
+        title: "Can Ribes Restaurante",
+        description: "Ayude con el diseño y la maquetación de la página de Restaurante Can Ribes. Hecho con Wordpress y Divi a juego con su DigiMenú y Digitarjeta.",
+        link: "https://restaurantecanribes.es/",
+        github: "",
+        image: canribesRes,
+        tags: [TAGS.CSS]
+    },
+    {
+        title: "Can Ribes DigiMenú",
+        description: "Menú Dígital de Restaurante. Hecho con Wordpress y Divi a juego con su Página principal.",
+        link: "https://canribes.digimenu.es/carta-2024/",
+        github: "",
+        image: canribes,
+        tags: [TAGS.CSS]
+    },
 ];
 ---
 
 {
-  PROJECTS.map(({ github,image, title, description, tags }) => (
-    <article>
+  PROJECTS.map(({ github,image,link, title, description, tags }) => (
+    <article class="mb-20">
             <h3 class="text-2xl font-semibolt text-pink-400 mb-2">{title}</h3>
           <Image class="rounded-lg"
               src={image}
@@ -54,9 +81,9 @@ const PROJECTS = [
             <p class="text-lg mb-4 text-pretty">{description}</p>
        
         <a
-    href={github}
+    href={link}
     class="inline-flex items-center mb-2 px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
-    >Verlo en Github<svg
+    >Ver Más<svg
         class="w-3 h-3 ms-2 rtl:rotate-180"
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
