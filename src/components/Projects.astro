@@ -66,13 +66,13 @@ const PROJECTS = [
 
 {
   PROJECTS.map(({ github,image,link, title, description, tags }) => (
-    <article class="mb-20 rounded-lg shadow-lg border-pink-400 border-2 p-10">
+    <article class="mb-5 rounded-lg shadow-lg border-pink-400 border-2 p-10">
             <h3 class="text-2xl font-semibold tracking-tight text-pink-400 mb-5">{title}</h3>
           <Image class="rounded-lg max-w-100 h-auto mb-5"
               src={image}
               alt={`Captura de pantalla del proyecto ${title}`}
           />
-               <ul class="flex flex-row gap-x-2 m-2 mb-8">
+               <ul class="flex flex-row gap-x-2 m-2 mb-2">
                 {tags.map((tag) => (
             <li>
               <span
