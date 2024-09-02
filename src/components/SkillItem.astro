@@ -1,13 +1,14 @@
 ---
 interface Props {
-    imge: any;
+    src: string;
+    href: string;
     name: string;
 }
-    const { imge: IconComponent, name } = Astro.props;
+    const { src, href, name } = Astro.props;
 ---
 
-<div class="flex">
-    <IconComponent class="size-7 mr-2" /> 
-    <p>{name}</p>
+<div class="flex flex-col items-center justify-center gap-y-2 bg-pink-400/20 rounded-lg p-4 text-xs font-semibold  hover:bg-purple-400/30 transition">
+    <a href={href} target="_blank" rel="noreferrer"><img src={src} width="36" height="36" alt={name} /></a>
+    <span class="">{name}</span>
 </div>
 
